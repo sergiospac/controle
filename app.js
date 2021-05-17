@@ -23,10 +23,10 @@ const addInfo = async avatarList => {
 }
 
 const getAvatars = async () => {
-  //const allUrl = "https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=500&page=1"
-  const avatarUrl = "https://last-airbender-api.herokuapp.com/api/v1/characters?profession=Avatar"
+  const allUrl = "https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=500&page=1"
+  //const avatarUrl = "https://last-airbender-api.herokuapp.com/api/v1/characters?profession=Avatar"
 
-  const result = await fetch(avatarUrl)
+  const result = await fetch(allUrl)
   let avatarList = await result.json()
 
   newAvatarList = await addInfo(avatarList)
